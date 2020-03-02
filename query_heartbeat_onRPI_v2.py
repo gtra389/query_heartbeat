@@ -1,7 +1,8 @@
 
 # coding: utf-8
 import requests
-from urllib.request import urlopen
+# from urllib.request import urlopen
+from urrlib2 import urlopen
 from bs4 import BeautifulSoup
 import re
 import pandas as pd
@@ -10,6 +11,7 @@ from time import gmtime, strftime
 from datetime import timedelta
 import smtplib
 from email.mime.text import MIMEText
+import os
 
 def creatURL(idN, t):
     string = "http://ec2-54-175-179-28.compute-1.amazonaws.com/get_thinktron_data.php?device_id={}&year_month={}".format(idN,t)
@@ -288,6 +290,16 @@ status = smtpssl.sendmail("n86024042@gmail.com",
 if status == {}:
     print("Sending e-mail is done.")
     smtpssl.quit()
+    
+    try:
+        os.remove("/home/pi/query_heartbeat/"+saveFid[0])
+        os.remove("/home/pi/query_heartbeat/"+saveFid[1])
+
+    except OSError as e:
+        print(e)
+    else:
+        print("The file is deleted successfully")
+
 else:
     print("Failed to transmit.")
     smtpssl.quit()
