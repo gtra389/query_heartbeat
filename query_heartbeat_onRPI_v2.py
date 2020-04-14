@@ -206,7 +206,9 @@ for location in locationList:
                       {'name':'迎旭山莊','id':'3018'},
                       {'name':'水蓮山莊','id':'2022'},
                       {'name':'新雪梨  ','id':'3030'},
-                      {'name':'伯爵幼兒','id':'3032'}]
+                      {'name':'伯爵幼兒','id':'3032'},
+                      {'name':'仁愛特區','id':'3035'},
+                      {'name':'詩畫管理','id':'3036'}]
         DBName = "New Taipei"
     elif (location.lower() == "taipei"):
         idNumDict  = [{'name':'政大自強','id':'2007'},
@@ -223,7 +225,11 @@ for location in locationList:
                       {'name':'松德院南','id':'2020'},              
                       {'name':'松德院南','id':'6002'},
                       {'name':'永春高中','id':'2023'},
-                      {'name':'世界山莊','id':'3031'}]
+                      {'name':'永春高中','id':'6003'},
+                      {'name':'世界山莊','id':'3031'},
+                      {'name':'世說新語','id':'3037'},
+                      {'name':'夏木漱石','id':'3034'},
+                      {'name':'玫瑰城社','id':'3033'}]
         DBName = "Taipei"
     else:
         print("No such name.")
