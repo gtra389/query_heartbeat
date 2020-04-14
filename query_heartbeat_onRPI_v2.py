@@ -1,8 +1,8 @@
 
 # coding: utf-8
 import requests
-# from urllib.request import urlopen
-from urrlib2 import urlopen
+from urllib import urlopen
+# from urrlib2 import urlopen
 from bs4 import BeautifulSoup
 import re
 import pandas as pd
