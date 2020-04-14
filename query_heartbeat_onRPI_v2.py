@@ -281,14 +281,14 @@ mime = MIMEText(msg, "plain", "utf-8")
 mime["Subject"] = "Icebergtek Device heartbeat\n"
 msgEmail        = mime.as_string()  
 
-# to_addr  = ["ian@icebergtek.com",
-#             "odie@icebergtek.com",
-#             "white@icebergtek.com",
-#             "jim@icebergtek.com",
-#             "meichi@thinktronltd.com",
-#             "james.wang@icebergtek.com"]
+to_addr  = ["ian@icebergtek.com",
+            "odie@icebergtek.com",
+            "white@icebergtek.com",
+            "jim@icebergtek.com",
+            "meichi@thinktronltd.com",
+            "james.wang@icebergtek.com"]
 
-to_addr  = ["ian@icebergtek.com"]          
+#to_addr  = ["ian@icebergtek.com"]          
 
 status = smtpssl.sendmail("n86024042@gmail.com", 
                           to_addr, 
